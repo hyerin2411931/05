@@ -3,28 +3,25 @@
 
 int main(int argc, char *argv[]){
      
-  int x, y;
-  char z;
-  int result;
+  int answer = 59;
+  int num;
+  int trial=0;
   
-  printf("enter the calculation :");
-  scanf("%i%c%i", &x, &z, &y);
-  
-  printf("%i %c %i\n", x, z, y);
-  
-
-  if(z == '+')
-       result = x+y;
-  else if(z == '-')
-       result = x-y ;
-  else if (z == '*')
-       result = x*y;
-  else
-      result = x/y; 
-  
-  printf("the result is %i.\n", result); 
+  do     //답을 못 맞춘 상황에서 도는 것 => while문 안에 답이  맞지 않은 경우로 식 설정 해야됨. 
+  {
+      printf("Input a numebr:");
+      scanf("%d", &num);
       
-  //switch문 사용 가능 -> case/default 나눠서 
+      if(answer < num)
+          printf("high!\n");
+      else if(answer > num)
+           printf("low!\n");
+           
+      trial++;
+  }
+  while(answer != num);
+  
+  printf("Congratulation! trial:%i\n", trial); 
        
        
   system("PAUSE");	

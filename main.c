@@ -3,16 +3,29 @@
 
 int main(int argc, char *argv[]){
      
-  int x;
-  int i;   //for문 돌리기 위한 변수 
-  int sum = 0;
-  printf("Input an number: ");
-  scanf("%d", &x);
+  int x, y;
+  char z;
+  int result;
   
-  for(i= 1; i <= x ; i ++)
-        sum = sum + i;     //for문 안에는 i가 들어가야 함. x 말고.. => x 들어가면 걍 입력받은 x를 x번 더하게 되는 식이 됨. 
-        
-  printf("The result is %i.\n", sum); 
+  printf("enter the calculation :");
+  scanf("%i%c%i", &x, &z, &y);
+  
+  printf("%i %c %i\n", x, z, y);
+  
+
+  if(z == '+')
+       result = x+y;
+  else if(z == '-')
+       result = x-y ;
+  else if (z == '*')
+       result = x*y;
+  else
+      result = x/y; 
+  
+  printf("the result is %i.\n", result); 
+      
+  //switch문 사용 가능 -> case/default 나눠서 
+       
        
   system("PAUSE");	
   return 0;

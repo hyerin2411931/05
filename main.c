@@ -9,7 +9,7 @@ int main(int argc, char *argv[]){
   printf("Input an number: ");
   scanf("%d", &x);
   
-  for(i= 1; i < x+1 ; i ++)
+  for(i= 1; i <= x ; i ++)
         sum = sum + i;     //for문 안에는 i가 들어가야 함. x 말고.. => x 들어가면 걍 입력받은 x를 x번 더하게 되는 식이 됨. 
         
   printf("The result is %i.\n", sum); 
